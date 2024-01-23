@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Settings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>User Settings</h1>
+<div class="container">
+<form action="/user_settings" method="post">
+<div class="form-group">
+<label for="theme">Theme:</label>
+<select name="theme" id="theme">
+<option value="light">Light</option>
+<option value="dark">Dark</option>
+</select>
+</div>
+<div class="form-group">
+<label for="sorting">Sorting:</label>
+<select name="sorting" id="sorting">
+<option value="country">Country</option>
+<option value="year">Year</option>
+<option value="denomination">Denomination</option>
+</select>
+</div>
+<div class="form-group">
+<label for="search_parameters">Default Search Parameters:</label>
+<input type="text" name="search_parameters" id="search_parameters">
+</div>
+<input type="submit" value="Save Settings">
+</form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
