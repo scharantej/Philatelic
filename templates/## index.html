@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stamp Collection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Stamp Collection</h1>
+<div class="container">
+<div class="search-bar">
+<form action="/search_stamps">
+<input type="text" name="country" placeholder="Country">
+<input type="text" name="year" placeholder="Year">
+<input type="text" name="denomination" placeholder="Denomination">
+<input type="text" name="characteristics" placeholder="Characteristics">
+<input type="submit" value="Search">
+</form>
+</div>
+<div class="stamp-list">
+{% for stamp in stamps %}
+<div class="stamp">
+<img src="{{ stamp.image }}" alt="{{ stamp.country }} {{ stamp.year }}">
+<div class="stamp-info">
+<p>{{ stamp.country }}</p>
+<p>{{ stamp.year }}</p>
+<p>{{ stamp.denomination }}</p>
+<p>{{ stamp.characteristics }}</p>
+<a href="/view_stamp/{{ stamp.stamp_id }}">View</a>
+<a href="/edit_stamp/{{ stamp.stamp_id }}">Edit</a>
+</div>
+</div>
+{% endfor %}
+</div>
+<div class="add-stamp">
+<a href="/add_stamp">Add a New Stamp</a>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
