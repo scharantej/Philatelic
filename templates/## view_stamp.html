@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ stamp.country }} {{ stamp.year }}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>{{ stamp.country }} {{ stamp.year }}</h1>
+<div class="container">
+<div class="stamp-image">
+<img src="{{ stamp.image }}" alt="{{ stamp.country }} {{ stamp.year }}">
+</div>
+<div class="stamp-info">
+<p>Country: {{ stamp.country }}</p>
+<p>Year: {{ stamp.year }}</p>
+<p>Denomination: {{ stamp.denomination }}</p>
+<p>Characteristics: {{ stamp.characteristics }}</p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
